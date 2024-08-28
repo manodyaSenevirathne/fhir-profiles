@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/MyPatient",
+  "name": "SL_Patient",
+  "status": "active",
+  "experimental": true,
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Patient",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Patient.identifier.extension",
+        "path": "Patient.identifier.extension",
+        "min": 1
+      },
+      {
+        "id": "Patient.identifier.extension:sriLankaNationalID",
+        "path": "Patient.identifier.extension",
+        "sliceName": "sriLankaNationalID",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/SriLankaNationalID"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Patient.name",
+        "path": "Patient.name",
+        "min": 1
+      },
+      {
+        "id": "Patient.address.extension:gramaNiladhariDivision",
+        "path": "Patient.address.extension",
+        "sliceName": "gramaNiladhariDivision",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/GramaNiladhariDivision"
+            ]
+          }
+        ],
+        "isModifier": false
+      }
+    ]
+  }
+}

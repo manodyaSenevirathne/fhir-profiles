@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "https://example.org/fhir/StructureDefinition/MyPractitioner",
+  "name": "SL_Practitioner",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Practitioner",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Practitioner.identifier",
+        "path": "Practitioner.identifier",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.identifier.extension",
+        "path": "Practitioner.identifier.extension",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.identifier.extension:sLMCRegistrationNumber",
+        "path": "Practitioner.identifier.extension",
+        "sliceName": "sLMCRegistrationNumber",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://example.org/fhir/StructureDefinition/SLMCRegistrationNumber"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Practitioner.name",
+        "path": "Practitioner.name",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.telecom",
+        "path": "Practitioner.telecom",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.address",
+        "path": "Practitioner.address",
+        "min": 1
+      },
+      {
+        "id": "Practitioner.qualification",
+        "path": "Practitioner.qualification",
+        "min": 1
+      }
+    ]
+  }
+}
