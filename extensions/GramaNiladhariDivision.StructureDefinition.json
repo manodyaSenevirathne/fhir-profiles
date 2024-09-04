@@ -1,8 +1,15 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "GramaNiladhariDivision",
   "url": "https://example.org/fhir/StructureDefinition/GramaNiladhariDivision",
+  "version": "1.0.0",
   "name": "GramaNiladhariDivision",
+  "title": "Grama Niladhari Division Extension",
   "status": "draft",
+  "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "An extension to capture the Grama Niladhari Division (a local administrative unit in Sri Lanka) associated with a patient's address.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -20,7 +27,8 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://example.org/fhir/StructureDefinition/GramaNiladhariDivision"
+        "fixedUri": "https://example.org/fhir/StructureDefinition/GramaNiladhariDivision",
+        "definition": "URL that uniquely identifies this extension for Grama Niladhari Division."
       },
       {
         "id": "Extension.value[x]",
@@ -29,7 +37,9 @@
           {
             "code": "string"
           }
-        ]
+        ],
+        "definition": "The name or code of the Grama Niladhari Division.",
+        "comment": "A Grama Niladhari Division is a small administrative region in Sri Lanka, typically used for local governance."
       }
     ]
   }

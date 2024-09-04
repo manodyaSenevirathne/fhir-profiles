@@ -1,8 +1,15 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "SriLankaNationalID",
   "url": "https://example.org/fhir/StructureDefinition/SriLankaNationalID",
+  "version": "1.0.0",
   "name": "SriLankaNationalID",
+  "title": "Sri Lanka National ID Extension",
   "status": "draft",
+  "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "An extension to capture the Sri Lanka National Identity Card (NIC) number for a patient.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -18,15 +25,10 @@
   "differential": {
     "element": [
       {
-        "id": "Extension",
-        "path": "Extension",
-        "min": 1,
-        "max": "1"
-      },
-      {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://example.org/fhir/StructureDefinition/SriLankaNationalID"
+        "fixedUri": "https://example.org/fhir/StructureDefinition/SriLankaNationalID",
+        "definition": "URL that uniquely identifies this extension for Sri Lanka National ID."
       },
       {
         "id": "Extension.value[x]",
@@ -37,7 +39,15 @@
             "code": "string"
           }
         ],
-        "patternString": "^(?:\\d{9}[Vv]|\\d{12})$"
+        "definition": "The Sri Lanka National Identity Card (NIC) number, which follows specific formats.",
+        "constraint": [
+          {
+            "key": "slk-1",
+            "severity": "error",
+            "human": "The NIC must match the format {9 digits}v, {9 digits}V, or {12 digits}.",
+            "expression": "value.matches('^[0-9]{9}[vV]|[0-9]{12}$')"
+          }
+        ]
       }
     ]
   }

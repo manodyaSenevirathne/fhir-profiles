@@ -1,8 +1,15 @@
 {
   "resourceType": "StructureDefinition",
+  "id": "SLMCRegistrationNumber",
   "url": "https://example.org/fhir/StructureDefinition/SLMCRegistrationNumber",
+  "version": "1.0.0",
   "name": "SLMCRegistrationNumber",
+  "title": "SLMC Registration Number Extension",
   "status": "draft",
+  "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "An extension to capture the Sri Lanka Medical Council (SLMC) registration number for a healthcare practitioner.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -20,19 +27,19 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://example.org/fhir/StructureDefinition/SLMCRegistrationNumber"
+        "fixedUri": "https://example.org/fhir/StructureDefinition/SLMCRegistrationNumber",
+        "definition": "URL that uniquely identifies this extension for SLMC Registration Number."
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "decimal"
-          },
-          {
             "code": "string"
           }
-        ]
+        ],
+        "definition": "The SLMC registration number, which is a unique identifier assigned to each registered practitioner by the Sri Lanka Medical Council.",
+        "comment": "SLMC registration numbers are typically alphanumeric."
       }
     ]
   }

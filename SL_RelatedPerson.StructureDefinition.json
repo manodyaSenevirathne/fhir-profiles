@@ -1,8 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://example.org/fhir/StructureDefinition/MyRelatedPerson",
+  "url": "https://example.org/fhir/StructureDefinition/SL_RelatedPerson",
+  "version": "1.0.0",
   "name": "SL_RelatedPerson",
+  "title": "Sri Lanka Related Person Profile",
   "status": "draft",
+  "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "Profile for related persons (such as family members or guardians) associated with a patient in Sri Lanka, specifying key fields like relationship, name, contact details, and address.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -14,22 +20,26 @@
       {
         "id": "RelatedPerson.relationship",
         "path": "RelatedPerson.relationship",
-        "min": 1
+        "min": 1,
+        "definition": "The relationship between the related person and the patient. At least one relationship must be specified."
       },
       {
         "id": "RelatedPerson.name",
         "path": "RelatedPerson.name",
-        "min": 1
+        "min": 1,
+        "definition": "The name of the related person. At least one name must be provided."
       },
       {
         "id": "RelatedPerson.telecom",
         "path": "RelatedPerson.telecom",
-        "min": 1
+        "min": 1,
+        "definition": "The contact details of the related person. At least one contact detail must be provided."
       },
       {
         "id": "RelatedPerson.address",
         "path": "RelatedPerson.address",
-        "min": 1
+        "min": 1,
+        "definition": "The address of the related person. At least one address must be provided."
       }
     ]
   }

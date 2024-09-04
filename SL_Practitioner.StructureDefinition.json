@@ -1,8 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://example.org/fhir/StructureDefinition/MyPractitioner",
+  "url": "https://example.org/fhir/StructureDefinition/SL_Practitioner",
+  "version": "1.0.0",
   "name": "SL_Practitioner",
+  "title": "Sri Lanka Practitioner Profile",
   "status": "draft",
+  "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "Profile for healthcare practitioners in Sri Lanka, including specific extensions like the Sri Lanka Medical Council (SLMC) registration number.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -14,12 +20,14 @@
       {
         "id": "Practitioner.identifier",
         "path": "Practitioner.identifier",
-        "min": 1
+        "min": 1,
+        "definition": "The unique identifier for the practitioner. At least one identifier must be provided."
       },
       {
         "id": "Practitioner.identifier.extension",
         "path": "Practitioner.identifier.extension",
-        "min": 1
+        "min": 1,
+        "definition": "An extension for additional identification details of the practitioner."
       },
       {
         "id": "Practitioner.identifier.extension:sLMCRegistrationNumber",
@@ -35,27 +43,32 @@
             ]
           }
         ],
-        "isModifier": false
+        "isModifier": false,
+        "definition": "Extension for the Sri Lanka Medical Council (SLMC) registration number of the practitioner."
       },
       {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
-        "min": 1
+        "min": 1,
+        "definition": "The name of the practitioner. At least one name must be provided."
       },
       {
         "id": "Practitioner.telecom",
         "path": "Practitioner.telecom",
-        "min": 1
+        "min": 1,
+        "definition": "The contact details of the practitioner. At least one contact detail must be provided."
       },
       {
         "id": "Practitioner.address",
         "path": "Practitioner.address",
-        "min": 1
+        "min": 1,
+        "definition": "The address of the practitioner. At least one address must be provided."
       },
       {
         "id": "Practitioner.qualification",
         "path": "Practitioner.qualification",
-        "min": 1
+        "min": 1,
+        "definition": "The qualifications of the practitioner. At least one qualification must be provided."
       }
     ]
   }

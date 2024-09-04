@@ -1,0 +1,74 @@
+{
+  "resourceType": "Practitioner",
+  "id": "practitioner123",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://example.org/practitioners",
+      "value": "PRAC123456",
+      "extension": [
+        {
+          "url": "https://example.org/fhir/StructureDefinition/SLMCRegistrationNumber",
+          "valueString": "SLMC123456"
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Rajapaksha",
+      "given": [
+        "Anil"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+94 11 2345678",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "456 Hospital Road"
+      ],
+      "city": "Kandy",
+      "state": "Central",
+      "postalCode": "20000",
+      "country": "LK"
+    }
+  ],
+  "qualification": [
+    {
+      "identifier": [
+        {
+          "system": "http://example.org/qualifications",
+          "value": "MBBS"
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v2/0131",
+            "code": "MD"
+          }
+        ],
+        "text": "Bachelor of Medicine, Bachelor of Surgery"
+      },
+      "period": {
+        "start": "2015-01-01"
+      },
+      "issuer": {
+        "display": "University of Colombo"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns='http://www.w3.org/1999/xhtml'>A practitioner named Anil Rajapaksha with SLMC registration number SLMC123456. Contact: +94 11 2345678, Address: 456 Hospital Road, Kandy, Central, 20000, LK.</div>"
+  }
+}

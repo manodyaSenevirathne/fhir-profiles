@@ -1,0 +1,47 @@
+{
+  "resourceType": "Patient",
+  "id": "patient123",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://example.org/patients",
+      "value": "PAT123456",
+      "extension": [
+        {
+          "url": "https://example.org/fhir/StructureDefinition/SriLankaNationalID",
+          "valueString": "123456789v"
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Perera",
+      "given": [
+        "Kumar"
+      ]
+    }
+  ],
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "123 Main Street"
+      ],
+      "city": "Colombo",
+      "district": "Colombo",
+      "state": "Western",
+      "postalCode": "00100",
+      "country": "LK",
+      "extension": [
+        {
+          "url": "https://example.org/fhir/StructureDefinition/GramaNiladhariDivision",
+          "valueString": "Kaduwela"
+        }
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1990-01-01"
+}

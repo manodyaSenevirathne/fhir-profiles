@@ -1,9 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://example.org/fhir/StructureDefinition/MyPatient",
+  "url": "https://example.org/fhir/StructureDefinition/SL_Patient",
+  "version": "1.0.0",
   "name": "SL_Patient",
+  "title": "Sri Lanka Patient Profile",
   "status": "active",
   "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "Profile for Sri Lankan Patients, including specific extensions like the National ID and Grama Niladhari Division.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -15,7 +20,9 @@
       {
         "id": "Patient.identifier.extension",
         "path": "Patient.identifier.extension",
-        "min": 1
+        "min": 1,
+        "definition": "An extension for Sri Lankan National Identity (NIC) information.",
+        "comment": "This extension ensures that a valid NIC is provided."
       },
       {
         "id": "Patient.identifier.extension:sriLankaNationalID",
@@ -29,12 +36,14 @@
             ]
           }
         ],
-        "isModifier": false
+        "isModifier": false,
+        "definition": "Extension for the Sri Lankan National ID."
       },
       {
         "id": "Patient.name",
         "path": "Patient.name",
-        "min": 1
+        "min": 1,
+        "definition": "Name of the patient. At least one name must be provided."
       },
       {
         "id": "Patient.address.extension:gramaNiladhariDivision",
@@ -48,7 +57,8 @@
             ]
           }
         ],
-        "isModifier": false
+        "isModifier": false,
+        "definition": "Extension for the Grama Niladhari Division information of the patient's address."
       }
     ]
   }

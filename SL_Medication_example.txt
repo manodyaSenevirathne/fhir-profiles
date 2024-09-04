@@ -1,0 +1,28 @@
+{
+  "resourceType": "Medication",
+  "id": "med123",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://example.org/medications",
+      "value": "MED123456",
+      "extension": [
+        {
+          "url": "https://example.org/fhir/StructureDefinition/NMRA_Number",
+          "valueInteger": 123456
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://example.org/medications",
+        "code": "MED123456",
+        "display": "Sample Medication"
+      }
+    ],
+    "text": "Sample Medication"
+  },
+  "status": "active"
+}

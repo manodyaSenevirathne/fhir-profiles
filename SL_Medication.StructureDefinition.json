@@ -1,8 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "https://example.org/fhir/StructureDefinition/MyMedication",
+  "url": "https://example.org/fhir/StructureDefinition/SL_Medication",
+  "version": "1.0.0",
   "name": "SL_Medication",
+  "title": "Sri Lanka Medication Profile",
   "status": "draft",
+  "experimental": true,
+  "publisher": "WSO2",
+  "date": "2024-09-04",
+  "description": "A profile for medications that include specific extensions, such as the National Medicines Regulatory Authority (NMRA) number in Sri Lanka.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -14,12 +20,14 @@
       {
         "id": "Medication.identifier",
         "path": "Medication.identifier",
-        "min": 1
+        "min": 1,
+        "definition": "The unique identifier for the medication. At least one identifier must be provided."
       },
       {
         "id": "Medication.identifier.extension",
         "path": "Medication.identifier.extension",
-        "min": 1
+        "min": 1,
+        "definition": "An extension for additional identification details of the medication."
       },
       {
         "id": "Medication.identifier.extension:nmraNumber",
@@ -35,7 +43,8 @@
             ]
           }
         ],
-        "isModifier": false
+        "isModifier": false,
+        "definition": "Extension for the National Medicines Regulatory Authority (NMRA) number for medications in Sri Lanka."
       }
     ]
   }
